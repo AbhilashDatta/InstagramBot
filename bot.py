@@ -45,9 +45,7 @@ class Bot():
 
 if __name__ == '__main__':
     bot = Bot()
-    bot.login('abhilash.datta', '8224abhi')
-    bot.retrieve_message('nyctophile')
-    bot.retrieve_message('testaccount')
+    bot.login(username, password)
+    bot.retrieve_message('abhilash.datta')
     bot.retrieve_message('kartik_murthy')
-
     bot.logout()
