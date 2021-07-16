@@ -1,6 +1,10 @@
 # Instagram Bot
 July 14, 2021
 
+<p align="center">
+  <img src="InstagramBot.jpg" />
+</p>
+
 ## Overview
 An instagram bot that can mass text users, receive and read a text back and store it somewhere with user details and much more. Exploring options like instagram API , selenium driver etc.
 
