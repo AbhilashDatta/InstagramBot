@@ -12,6 +12,7 @@ pyperclip = "*"
 pyautogui = "*"
 opencv-python = "*"
 pillow = "*"
+wget = "*"
 
 [requires]
 python_version = "3.8"
