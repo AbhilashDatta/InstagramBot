@@ -1,6 +1,5 @@
 from selenium import webdriver
 from time import sleep
-from credentials import username, password
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -8,7 +7,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 def Dm(driver,user,message):
-    
+    ''' This function is used to direct message a single user/group '''
+
     driver.get('https://www.instagram.com/direct/inbox/')
     
     send_message_button = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div/div[3]/div/button'))).click()
