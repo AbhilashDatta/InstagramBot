@@ -12,6 +12,7 @@ from __dm__ import Dm
 from __multiple_dm__ import Multiple_dm
 from __group_dm__ import Group_dm
 from __retrieve_message__ import Retrieve_message
+from __follow_user__ import Follow_user
 
 
 class Bot():
@@ -41,11 +42,14 @@ class Bot():
     def retrieve_message(self, user):
         Retrieve_message(self.driver,user)
         self.driver.get('https://www.instagram.com/')
+
+    def follow_user(self, user):
+        Follow_user(self.driver, user)
+        self.driver.get('https://www.instagram.com/')
     
 
 if __name__ == '__main__':
     bot = Bot()
     bot.login(username, password)
-    bot.retrieve_message('abhilash.datta')
-    bot.retrieve_message('kartik_murthy')
-    bot.logout()
+    bot.follow_user('abhilash.datta')
+    # bot.logout()

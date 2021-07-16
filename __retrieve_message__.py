@@ -11,7 +11,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 
 def Retrieve_message(driver, user):
-    ''' Initially on Instagram Home screen '''
+    ''' Function to retrieve the latest message of a specified user '''
 
     search_user = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input')))
     search_user.send_keys(user)
@@ -20,7 +20,7 @@ def Retrieve_message(driver, user):
     
     m_button = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="react-root"]/section/main/div/header/section/div[1]/div[1]/div/div[1]/button'))).click()
     
-    sleep(5)
+    wait = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea')))
     
     # move to latest message
 
@@ -32,7 +32,6 @@ def Retrieve_message(driver, user):
     pt.moveTo(dots[0:2], duration = 0.5)
     pt.click()
 
-    sleep(1)
     copy = pt.locateOnScreen('images/insta_copy.jpg', confidence = 0.9)
     pt.moveTo(copy[0:2], duration = 0.5)
     pt.click()
