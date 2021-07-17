@@ -1,7 +1,6 @@
 from selenium import webdriver
 from time import sleep
 import pyperclip as pc
-from credentials import username, password
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -58,9 +57,3 @@ class Bot():
         Like_by_keyword(self.driver, keyword, n)
         self.driver.get('https://www.instagram.com/')
     
-
-if __name__ == '__main__':
-    bot = Bot()
-    bot.login(username, password)
-    bot.like_by_keyword('abhilash.datta', 20)
-    bot.logout()

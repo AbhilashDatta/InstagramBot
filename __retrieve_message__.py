@@ -31,7 +31,7 @@ def Retrieve_message(driver, user):
     dots = pt.locateOnScreen('images/insta_dots.png', confidence = 0.9)
     pt.moveTo(dots[0:2], duration = 0.5)
     pt.click()
-
+    sleep(2)
     copy = pt.locateOnScreen('images/insta_copy.jpg', confidence = 0.9)
     pt.moveTo(copy[0:2], duration = 0.5)
     pt.click()
