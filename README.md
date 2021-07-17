@@ -13,17 +13,17 @@ An instagram bot that can mass text users, receive and read a text back and stor
 ## Get Started
 <li> PIPENV: For virtual environment </li>
 <p><code>
-    pip install pipenv
+  $  pip install pipenv
 </code></p>
 <br>
 <li> Installing required libraries and versions </li>
 <p><code>
-    pipenv install
+  $  pipenv install
 </code></p>
 <br>
 <li> Starting the PIP virtual environment </li>
 <p><code>
-    pipenv shell
+  $  pipenv shell
 </code></p>
 <br>
 
@@ -31,59 +31,79 @@ An instagram bot that can mass text users, receive and read a text back and stor
 ## Functionalities:
 <ul>
   <li> Login into Instagram: (Achieved)
-    <p><code>
-    from __login__ import Login <br>
-    Login(driver, {username}, {password})
-    </code></p>
-    <br>
+    
+```
+from __login__ import Login
+
+Login(driver, <username>, <password>)
+```
+
+
   </li>
   <li> Texting to a Single User: (Achieved) 
-  <p><code>
-    from __dm__ import Dm <br>
-    Dm(driver, {user}, {message})
-    </code></p>
-    <br>
+
+```
+from __dm__ import 
+
+Dm(driver, <user>, <message>)
+```
+
   </li>
   <li> Following Users: (Achieved) 
-  <p><code>
-    from __follow_user__ import Follow_user <br>
-    Follow_user(driver, {username})
-    </code></p>
-    <br></li>
-  <li> Responding to a Single User: (Achieved) <p><code>
-    from __retrieve_message__ import Retrieve_message <br>
-    Retrieve_message(driver, {username})
-    </code></p>
-    <br></li>
+
+```
+from __follow_user__ import Follow_user
+
+Follow_user(driver, <username>)
+```  
+  </li>
+  <li> Responding to a Single User: (Achieved) 
+
+```
+    from __retrieve_message__ import Retrieve_message 
+
+    Retrieve_message(driver, <username>)
+```  
+  </li>
   <li> Texting to Multiple Users: (Achieved)
-  <p><code>
-    from __multiple_dm__ import Multiple_dm <br>
-    Multiple_dm(driver, [users], {message})
-    </code></p>
-    <br></li>
+
+```
+    from __multiple_dm__ import Multiple_dm
+
+    Multiple_dm(driver, [users], <message>)
+```  
+  </li>
   <li> Creating Group and texting in it: (Achieved)
-  <p><code>
-    from __group_dm__ import Group_dm <br>
+
+```
+    from __group_dm__ import Group_dm 
+
     Group_dm(driver, [users], {message})
-    </code></p>
-    <br></li>
+```  
+  </li>
   <li> Downloading a number of posts with a keyword: (Achieved)
-  <p><code>
-    from __download_pics__ import Download_pics <br>
+
+```
+    from __download_pics__ import Download_pics
+
     Download_pics(driver, {keyword})
-    </code></p>
-    <br></li>
+```
+  </li>
   <li> Liking a number of posts of a user/hashtag: (Achieved)
-  <p><code>
-    from __like_by_keyword__ import Like_by_keyword <br>
+
+```
+    from __like_by_keyword__ import Like_by_keyword
+    
     Like_by_keyword(driver, {keyword})
-    </code></p>
-    <br></li>
+```
+  </li>
   <li> Logging Out: (Achieved) 
-  <p><code>
-    from __logout__ import Logout <br>
+
+```
+    from __logout__ import Logout
+    
     Logout(driver)
-    </code></p>
-    <br></li>
+```
+  </li>
   <li> GUI app: (On the way)</li>
 </ul>
