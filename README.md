@@ -60,49 +60,49 @@ Follow_user(driver, <username>)
   <li> Responding to a Single User: (Achieved) 
 
 ```
-    from __retrieve_message__ import Retrieve_message 
+from __retrieve_message__ import Retrieve_message 
 
-    Retrieve_message(driver, <username>)
+Retrieve_message(driver, <username>)
 ```  
   </li>
   <li> Texting to Multiple Users: (Achieved)
 
 ```
-    from __multiple_dm__ import Multiple_dm
+from __multiple_dm__ import Multiple_dm
 
-    Multiple_dm(driver, [users], <message>)
+Multiple_dm(driver, [users], <message>)
 ```  
   </li>
   <li> Creating Group and texting in it: (Achieved)
 
 ```
-    from __group_dm__ import Group_dm 
+from __group_dm__ import Group_dm 
 
-    Group_dm(driver, [users], {message})
+Group_dm(driver, [users], {message})
 ```  
   </li>
   <li> Downloading a number of posts with a keyword: (Achieved)
 
 ```
-    from __download_pics__ import Download_pics
+from __download_pics__ import Download_pics
 
-    Download_pics(driver, {keyword})
+Download_pics(driver, {keyword})
 ```
   </li>
   <li> Liking a number of posts of a user/hashtag: (Achieved)
 
 ```
-    from __like_by_keyword__ import Like_by_keyword
-    
-    Like_by_keyword(driver, {keyword})
+from __like_by_keyword__ import Like_by_keyword
+
+Like_by_keyword(driver, {keyword})
 ```
   </li>
   <li> Logging Out: (Achieved) 
 
 ```
-    from __logout__ import Logout
-    
-    Logout(driver)
+from __logout__ import Logout
+
+Logout(driver)
 ```
   </li>
   <li> GUI app: (On the way)</li>
