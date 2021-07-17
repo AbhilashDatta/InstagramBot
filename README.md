@@ -8,6 +8,7 @@ July 14, 2021
 ## Overview
 A multifunctionality automated instagram bot that can mass text users, receive and read a message and store it somewhere with user details and much more. Powered by Selenium.
 
+ [![](https://camo.githubusercontent.com/2fb0723ef80f8d87a51218680e209c66f213edf8/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6d6164652d776974682d707974686f6e2e737667)](https://python.org)
 <br>
 
 ## Get Started
@@ -171,7 +172,7 @@ Multiple_dm(driver, [users], <message>)
 ```
 from __group_dm__ import Group_dm 
 
-Group_dm(driver, [users], {message})
+Group_dm(driver, [users], <message>)
 ```  
   </li>
   <li> Downloading a number of posts with a keyword: (Achieved)
@@ -179,7 +180,7 @@ Group_dm(driver, [users], {message})
 ```
 from __download_pics__ import Download_pics
 
-Download_pics(driver, {keyword})
+Download_pics(driver, <keyword>)
 ```
   </li>
   <li> Liking a number of posts of a user/hashtag: (Achieved)
@@ -187,7 +188,7 @@ Download_pics(driver, {keyword})
 ```
 from __like_by_keyword__ import Like_by_keyword
 
-Like_by_keyword(driver, {keyword})
+Like_by_keyword(driver, <keyword>)
 ```
   </li>
   <li> Logging Out: (Achieved) 
