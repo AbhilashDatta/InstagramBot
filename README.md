@@ -66,7 +66,7 @@ bot.follow_user('user')
 
 * Like a number of posts by a user/hashtag
 ```
-bot.like_by_keyword('user', numOfPosts)
+bot.like_by_keyword(keyword, numOfPosts)
 ```
 
 <br>
@@ -92,9 +92,9 @@ bot.retrieve_message('user')
 
 <br>
 
-* Download posts of a user/hashtag
+* Download posts by a keyword
 ```
-bot.download_pics('#dog')
+bot.download_pics(keyword)
 ```
 
 <br>
