@@ -17,7 +17,7 @@ An instagram bot that can mass text users, receive and read a text back and stor
   <li> Texting to Multiple Users: (Achieved)</li>
   <li> Creating Group and texting in it: (Achieved)</li>
   <li> Downloading a number of posts with a keyword: (Achieved)</li>
-  <li> Liking a number of posts of a user/hashtag: (On the way) </li>
+  <li> Liking a number of posts of a user/hashtag: (Achieved)</li>
   <li> Logging Out: (Achieved) </li>
   <li> Building a GUI app: (On the way)</li>
 </ul>
