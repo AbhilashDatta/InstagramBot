@@ -202,9 +202,12 @@ Logout(driver)
   </li>
   <li> GUI app: (On the way)</li>
 </ul>
-
-Platform: Python files. Virtual Environment using PIPENV.
-Libraries: Selenium, Instabot, InstaPy, Time, Pyperclip, Pyautogui, OpenCv, os, wget
-Softwares: Windows Chromedriver 
-Low-Level Specs: Whole program is built in Object Oriented fashion and Modular structure is followed throughout.
+<br>
     
+<b> Platform:</b> Python files. Virtual Environment using PIPENV.
+   
+<b> Libraries:</b> Selenium, Instabot, InstaPy, Time, Pyperclip, Pyautogui, OpenCv, os, wget
+    
+<b> Softwares:</b> Windows Chromedriver 
+    
+<b> Low-Level Specs:</b> Whole program is built in Object Oriented fashion and Modular structure is followed throughout.
