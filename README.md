@@ -29,58 +29,70 @@ An instagram bot that can mass text users, receive and read a text back and stor
 
 ## Multipurpose Bot
 
-* Import the bot
+
+<br>
+
+* Login-out using credentials 
 ```
 from BOT import Bot
-```
-
-<br>
-
-* Initialize the bot
-```
 bot = Bot()
-```
-
-<br>
-
-* Login using credentials 
-```
 bot.login(username, password)
+bot.logout()
 ```
 
 <br>
 
 * Direct Message anyone
 ```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
 bot.dm('user','Hi there')
+bot.logout()
 ```
 
 <br>
 
 * Follow another user
 ```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
 bot.follow_user('user')
+bot.logout()
 ```
 
 <br>
 
 * Like a number of posts by a user/hashtag
 ```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
 bot.like_by_keyword(keyword, numOfPosts)
+bot.logout()
 ```
 
 <br>
 
 * Create a group and direct message in it
 ```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
 bot.group_dm(['user1','user2', 'user3'],'Final Testing')
+bot.logout()
 ```
 
 <br>
 
 * Direct Message multiple users
 ```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
 bot.multiple_dm(['user1','user2', 'user3'],'Final Testing')
+bot.logout()
 ```
 
 <br>
@@ -90,20 +102,21 @@ bot.multiple_dm(['user1','user2', 'user3'],'Final Testing')
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
     
 ```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
 bot.retrieve_message('user')
+bot.logout()
 ```
 
 <br>
 
 * Download posts by a keyword
 ```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
 bot.download_pics(keyword)
-```
-
-<br>
-
-* Finally Logout
-```
 bot.logout()
 ```
 
