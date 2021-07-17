@@ -1,4 +1,4 @@
-from bot import Bot
+from BOT import Bot
 from credentials import username, password
 
 if __name__ == '__main__':
