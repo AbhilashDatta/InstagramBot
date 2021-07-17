@@ -27,8 +27,63 @@ An instagram bot that can mass text users, receive and read a text back and stor
 </code></p>
 <br>
 
+## Multipurpose Bot
+```
+from bot import Bot
+```
 
-## Functionalities:
+* initialize the bot
+```
+bot = Bot()
+```
+
+* Login using credentials 
+```
+bot.login(username, password)
+```
+
+* Direct Message anyone
+```
+bot.dm('user','Hi there')
+```
+
+* Follow another user
+```
+bot.follow_user('user')
+```
+
+* Like a number of posts by a user/hashtag
+```
+bot.like_by_keyword('user', 20)
+```
+
+* Create a group and direct message in it
+```
+bot.group_dm(['user1','user2', 'user3'],'Final Testing')
+```
+
+* Direct Message multiple users
+```
+bot.multiple_dm(['user1','user2', 'user3'],'Final Testing')
+```
+
+* Retrieve message from a user
+```
+bot.retrieve_message('user')
+```
+
+* Download posts of a user/hashtag
+```
+bot.download_pics('#dog')
+```
+
+* Finally Logout
+```
+bot.logout()
+```
+
+
+## Individual Functionalities:
 <ul>
   <li> Login into Instagram: (Achieved)
     
