@@ -97,7 +97,7 @@ bot.logout()
 
 <br>
 
-* Retrieve the latest message from a user
+* Retrieve the latest message from multiple user
 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
     
@@ -105,7 +105,7 @@ bot.logout()
 from BOT import Bot
 bot = Bot()
 bot.login(username, password)
-bot.retrieve_message('user')
+bot.retrieve_messages('user')
 bot.logout()
 ```
 
@@ -155,9 +155,9 @@ Follow_user(driver, <username>)
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
     
 ```
-from __retrieve_message__ import Retrieve_message 
+from __retrieve_messages__ import Retrieve_messages
 
-Retrieve_message(driver, <username>)
+Retrieve_messages(driver, <username>)
 ```  
   </li>
   <li> Texting to Multiple Users: (Achieved)
