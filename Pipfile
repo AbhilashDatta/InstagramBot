@@ -7,7 +7,6 @@ verify_ssl = true
 
 [packages]
 selenium = "*"
-instabot = "*"
 pyperclip = "*"
 pyautogui = "*"
 opencv-python = "*"
