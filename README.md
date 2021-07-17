@@ -30,8 +30,6 @@ A multifunctionality automated instagram bot that can mass text users, receive a
 ## Multipurpose Bot
 
 
-<br>
-
 * Login-out using credentials 
 ```
 from BOT import Bot
