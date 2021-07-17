@@ -14,6 +14,7 @@ from __group_dm__ import Group_dm
 from __retrieve_message__ import Retrieve_message
 from __follow_user__ import Follow_user
 from __download_pics__ import Download_pics
+from __like_by_keyword__ import Like_by_keyword
 
 
 class Bot():
@@ -52,10 +53,14 @@ class Bot():
     def download_pics(self, keyword):
         Download_pics(self.driver, keyword)
         self.driver.get('https://www.instagram.com/')
+
+    def like_by_keyword(self, keyword, n = 5):
+        Like_by_keyword(self.driver, keyword, n)
+        self.driver.get('https://www.instagram.com/')
     
 
 if __name__ == '__main__':
     bot = Bot()
     bot.login(username, password)
-    bot.download_pics('#dog')
+    bot.like_by_keyword('abhilash.datta', 20)
     bot.logout()
