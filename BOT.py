@@ -10,7 +10,7 @@ from __logout__ import Logout
 from __dm__ import Dm
 from __multiple_dm__ import Multiple_dm
 from __group_dm__ import Group_dm
-from __retrieve_message__ import Retrieve_message
+from __retrieve_messages__ import Retrieve_messages
 from __follow_user__ import Follow_user
 from __download_pics__ import Download_pics
 from __like_by_keyword__ import Like_by_keyword
@@ -41,8 +41,8 @@ class Bot():
         Group_dm(self.driver, users, message)
         self.driver.get('https://www.instagram.com/')
 
-    def retrieve_message(self, user):
-        Retrieve_message(self.driver,user)
+    def retrieve_messages(self, users):
+        Retrieve_messages(self.driver,users)
         self.driver.get('https://www.instagram.com/')
 
     def follow_user(self, user):
