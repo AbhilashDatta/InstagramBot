@@ -85,7 +85,7 @@ bot.multiple_dm(['user1','user2', 'user3'],'Final Testing')
 
 <br>
 
-* Retrieve message from a user
+* Retrieve the latest message from a user
 ```
 bot.retrieve_message('user')
 ```
