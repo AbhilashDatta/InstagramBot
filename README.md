@@ -86,6 +86,9 @@ bot.multiple_dm(['user1','user2', 'user3'],'Final Testing')
 <br>
 
 * Retrieve the latest message from a user
+
+<p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
+    
 ```
 bot.retrieve_message('user')
 ```
@@ -136,7 +139,8 @@ Follow_user(driver, <username>)
 ```  
   </li>
   <li> Responding to a Single User: (Achieved) 
-
+<p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
+    
 ```
 from __retrieve_message__ import Retrieve_message 
 
