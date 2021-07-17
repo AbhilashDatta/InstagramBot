@@ -1,17 +1,19 @@
-# Instagram Bot
+# Instagram Bot :robot:
 July 14, 2021
 
 <p align="center">
   <img src="InstagramBot.jpg" />
 </p>
 
-## Overview
+## Overview 👍
 A multifunctionality automated instagram bot that can mass text users, receive and read a message and store it somewhere with user details and much more. Powered by Selenium.
 
  [![](https://camo.githubusercontent.com/2fb0723ef80f8d87a51218680e209c66f213edf8/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6d6164652d776974682d707974686f6e2e737667)](https://python.org)
-<br>
 
-## Get Started
+
+
+
+## Get Started 🤞
 <li> PIPENV: For virtual environment </li>
 <p><code>
   $  pip install pipenv
@@ -28,7 +30,7 @@ A multifunctionality automated instagram bot that can mass text users, receive a
 </code></p>
 <br>
 
-## Multipurpose Bot
+## Multipurpose Bot 🛰️
 
 
 * Login-out using credentials 
