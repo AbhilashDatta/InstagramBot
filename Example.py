@@ -2,6 +2,8 @@ from bot import Bot
 from credentials import username, password
 
 if __name__ == '__main__':
+    ''' Feed the program your required data'''
+
     bot = Bot()
     bot.login(username, password)
     bot.dm('abhilash.datta','Hi there')
