@@ -83,6 +83,7 @@ bot.logout()
 ```
 
 <br>
+
 ## Individual Functionalities:
 <ul>
   <li> Login into Instagram: (Achieved)
