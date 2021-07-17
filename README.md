@@ -31,7 +31,7 @@ An instagram bot that can mass text users, receive and read a text back and stor
 
 * Import the bot
 ```
-from bot import Bot
+from BOT import Bot
 ```
 
 <br>
