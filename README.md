@@ -120,7 +120,21 @@ bot.logout()
 from BOT import Bot
 bot = Bot()
 bot.login(username, password)
-bot.retrieve_messages('user')
+bot.retrieve_messages([users])
+bot.logout()
+```
+
+<br>
+
+* Retrieve the latest message from multiple user in a csv file
+
+<p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
+    
+```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
+bot.retrieve_messages_from_csv('path to csv file')
 bot.logout()
 ```
 
@@ -166,13 +180,22 @@ from __follow_users__ import Follow_users
 Follow_users(driver, ['user1','user2'])
 ```  
   </li>
-  <li> Responding to a Single User: (Achieved) 
+  <li> Retrieving messages from single/multiple user(s): (Achieved) 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
     
 ```
 from __retrieve_messages__ import Retrieve_messages
 
-Retrieve_messages(driver, <username>)
+Retrieve_messages(driver, [users])
+```  
+  </li>
+  <li> Retrieving messages from single/multiple user(s) with names in a csv file: (Achieved) 
+<p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
+    
+```
+from __retrieve_messages_from_csv__ import Retrieve_messages_from_csv
+
+Retrieve_messages_from_csv(driver, 'path to csv file')
 ```  
   </li>
   <li> Texting to Multiple Users: (Achieved)
@@ -181,6 +204,14 @@ Retrieve_messages(driver, <username>)
 from __multiple_dm__ import Multiple_dm
 
 Multiple_dm(driver, [users], <message>)
+```  
+  </li>
+  <li> Texting to Multiple Users from a csv file: (Achieved)
+
+```
+from __multiple_dm_from_csv__ import Multiple_dm_from_csv
+
+Multiple_dm_from_csv(driver, 'path to csv file', <general message (optional)>)
 ```  
   </li>
   <li> Creating Group and texting in it: (Achieved)
