@@ -98,6 +98,20 @@ bot.logout()
 
 <br>
 
+* Direct Message multiple users from a csv file
+```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
+# if csv file doesn't contains message column
+bot.multiple_dm_from_csv('path to csv file','general message')
+# else
+bot.multiple_dm_from_csv('path to csv file') 
+bot.logout()
+```
+
+<br>
+
 * Retrieve the latest message from multiple user
 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
