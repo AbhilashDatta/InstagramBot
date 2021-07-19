@@ -11,7 +11,7 @@ def Multiple_dm_from_csv(driver, csv_file, general_message = ''):
     ''' This function sends a message to multiple users from a csv file '''
     '''
         csv_file should have columns like-
-        users   message 
+        users   messages 
         user1   msg1
         user2   msg2
         ..     .. 
@@ -25,10 +25,10 @@ def Multiple_dm_from_csv(driver, csv_file, general_message = ''):
 
     df = pd.read_csv(csv_file)
 
-    if 'message' in df.columns:
+    if 'messages' in df.columns:
         for i in range(len(df)):
             user = df.iloc[i]['users']
-            message = df.iloc[i]['message']
+            message = df.iloc[i]['messages']
 
             Dm(driver, user, message)
     
