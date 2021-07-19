@@ -59,7 +59,7 @@ bot.logout()
 from BOT import Bot
 bot = Bot()
 bot.login(username, password)
-bot.follow_user('user')
+bot.follow_users(['user1','user2'])
 bot.logout()
 ```
 
@@ -147,9 +147,9 @@ Dm(driver, <user>, <message>)
   <li> Following Users: (Achieved) 
 
 ```
-from __follow_user__ import Follow_user
+from __follow_users__ import Follow_users
 
-Follow_user(driver, <username>)
+Follow_users(driver, ['user1','user2'])
 ```  
   </li>
   <li> Responding to a Single User: (Achieved) 
