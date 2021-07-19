@@ -23,37 +23,69 @@ class Bot():
         self.driver.maximize_window()
         
     def login(self, usrname, passkey):
-        Login(self.driver, usrname, passkey)
+        try:
+            Login(self.driver, usrname, passkey)
+        except:
+            print("Unable to Login!")
+            exit(0)
 
     def logout(self):
         Logout(self.driver)
         self.driver.minimize_window()
 
     def dm(self, user,message):
-        Dm(self.driver, user, message)
-        self.driver.get('https://www.instagram.com/')
+        try:
+            Dm(self.driver, user, message)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to DM!")
+            self.driver.get('https://www.instagram.com/')
 
     def multiple_dm(self, users, message):
-        Multiple_dm(self.driver, users, message)
-        self.driver.get('https://www.instagram.com/')
+        try:
+            Multiple_dm(self.driver, users, message)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to DM!")
+            self.driver.get('https://www.instagram.com/')
 
     def group_dm(self, users, message):
-        Group_dm(self.driver, users, message)
-        self.driver.get('https://www.instagram.com/')
+        try:
+            Group_dm(self.driver, users, message)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to DM!")
+            self.driver.get('https://www.instagram.com/')
 
     def retrieve_messages(self, users):
-        Retrieve_messages(self.driver,users)
-        self.driver.get('https://www.instagram.com/')
+        try:
+            Retrieve_messages(self.driver,users)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to Retrieve message!")
+            self.driver.get('https://www.instagram.com/')
 
     def follow_users(self, users):
-        Follow_users(self.driver, users)
-        self.driver.get('https://www.instagram.com/')
+        try:
+            Follow_users(self.driver, users)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to Follow user!")
+            self.driver.get('https://www.instagram.com/')
 
     def download_pics(self, keyword):
-        Download_pics(self.driver, keyword)
-        self.driver.get('https://www.instagram.com/')
+        try:
+            Download_pics(self.driver, keyword)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to Download posts!")
+            self.driver.get('https://www.instagram.com/')
 
     def like_by_keyword(self, keyword, n = 5):
-        Like_by_keyword(self.driver, keyword, n)
-        self.driver.get('https://www.instagram.com/')
+        try:
+            Like_by_keyword(self.driver, keyword, n)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to Like post!")
+            self.driver.get('https://www.instagram.com/')
     
