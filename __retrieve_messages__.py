@@ -31,14 +31,30 @@ def Retrieve_messages(driver, users):
         smily = pt.locateOnScreen('images/insta_smily.jpg', confidence = 0.9)
         pt.moveTo(smily[0:2], duration = 0.5)
         pt.moveRel(70, -70, duration = 0.5)
-
+        
         dots = pt.locateOnScreen('images/insta_dots.png', confidence = 0.9)
-        pt.moveTo(dots[0:2], duration = 0.5)
-        pt.click()
+
+        try:
+            pt.moveTo(dots[0:2], duration = 0.5)
+            pt.click()
+
+        except:
+            print("No message received!")
+            driver.get('https://www.instagram.com/')
+            continue
+
         sleep(1)
         copy = pt.locateOnScreen('images/insta_copy.jpg', confidence = 0.9)
-        pt.moveTo(copy[0:2], duration = 0.5)
-        pt.click()
+        
+        try:
+            pt.moveTo(copy[0:2], duration = 0.5)
+            pt.click()
+
+        except:
+            print("Not a text message!")
+            driver.get('https://www.instagram.com/')
+            continue
+
 
         message = pc.paste()
         full_message = user+' : '+message+'\n'
