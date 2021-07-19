@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+import pandas as pd
 from __login__ import Login
 from __logout__ import Logout
 from __dm__ import Dm
@@ -14,6 +15,7 @@ from __retrieve_messages__ import Retrieve_messages
 from __follow_users__ import Follow_users
 from __download_pics__ import Download_pics
 from __like_by_keyword__ import Like_by_keyword
+from __multiple_dm_from_csv__ import Multiple_dm_from_csv
 
 
 class Bot():
@@ -88,4 +90,11 @@ class Bot():
         except:
             print("Unable to Like post!")
             self.driver.get('https://www.instagram.com/')
-    
+
+    def multiple_dm_from_csv(self, csv_file, general_message = ''):
+        try:
+            Multiple_dm_from_csv(self.driver, csv_file, general_message)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to send message!")
+            self.driver.get('https://www.instagram.com/')

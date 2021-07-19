@@ -8,6 +8,8 @@ from __dm__ import Dm
 
 def Multiple_dm(driver,users,message):
     ''' This function sends a message to multiple users individually '''
+    if isinstance(users,str):
+        users = [users]
 
     for user in users:
         Dm(driver, user, message)
