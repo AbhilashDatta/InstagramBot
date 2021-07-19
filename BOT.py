@@ -11,7 +11,7 @@ from __dm__ import Dm
 from __multiple_dm__ import Multiple_dm
 from __group_dm__ import Group_dm
 from __retrieve_messages__ import Retrieve_messages
-from __follow_user__ import Follow_user
+from __follow_users__ import Follow_users
 from __download_pics__ import Download_pics
 from __like_by_keyword__ import Like_by_keyword
 
@@ -45,8 +45,8 @@ class Bot():
         Retrieve_messages(self.driver,users)
         self.driver.get('https://www.instagram.com/')
 
-    def follow_user(self, user):
-        Follow_user(self.driver, user)
+    def follow_users(self, users):
+        Follow_users(self.driver, users)
         self.driver.get('https://www.instagram.com/')
 
     def download_pics(self, keyword):
