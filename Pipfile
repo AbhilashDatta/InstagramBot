@@ -13,6 +13,7 @@ opencv-python = "*"
 pillow = "*"
 wget = "*"
 pandas = "*"
+pymongo = "*"
 
 [requires]
 python_version = "3.8"
