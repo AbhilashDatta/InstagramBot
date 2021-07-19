@@ -16,6 +16,7 @@ from __follow_users__ import Follow_users
 from __download_pics__ import Download_pics
 from __like_by_keyword__ import Like_by_keyword
 from __multiple_dm_from_csv__ import Multiple_dm_from_csv
+from __retrieve_messages_from_csv__ import Retrieve_messages_from_csv
 
 
 class Bot():
@@ -97,4 +98,12 @@ class Bot():
             self.driver.get('https://www.instagram.com/')
         except:
             print("Unable to send message!")
+            self.driver.get('https://www.instagram.com/')
+
+    def retrieve_messages_from_csv(self, csv_file):
+        try:
+            Retrieve_messages_from_csv(self.driver,csv_file)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to Retrieve message!")
             self.driver.get('https://www.instagram.com/')

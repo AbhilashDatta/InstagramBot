@@ -11,7 +11,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 
 def Retrieve_messages(driver, users):
-    ''' Function to retrieve the latest message of a specified user '''
+    ''' Function to retrieve the latest message of certain users '''
 
     if isinstance(users,str):
         users = [users]
@@ -32,37 +32,45 @@ def Retrieve_messages(driver, users):
         # move to latest message
 
         smily = pt.locateOnScreen('images/insta_smily.jpg', confidence = 0.9)
-        pt.moveTo(smily[0:2], duration = 0.5)
-        pt.moveRel(70, -70, duration = 0.5)
+        pt.moveTo(smily[0:2], duration = 0.1)
+        pt.moveRel(70, -70, duration = 0.2)
         
         dots = pt.locateOnScreen('images/insta_dots.png', confidence = 0.9)
 
         try:
-            pt.moveTo(dots[0:2], duration = 0.5)
+            pt.moveTo(dots[0:2], duration = 0.2)
             pt.click()
 
         except:
-            print("No message received!")
+            print("No message received from "+user)
             driver.get('https://www.instagram.com/')
             continue
 
         sleep(1)
-        copy = pt.locateOnScreen('images/insta_copy.jpg', confidence = 0.9)
-        
-        try:
-            pt.moveTo(copy[0:2], duration = 0.5)
-            pt.click()
 
-        except:
-            print("Not a text message!")
-            driver.get('https://www.instagram.com/')
+        try:
+            unsend = pt.locateOnScreen('images/insta_unsend.png', confidence = 0.9)
+            pt.moveTo(unsend[0:2],duration = 0.1)
+            print('No message received from '+user)
             continue
 
+        except:
+            copy = pt.locateOnScreen('images/insta_copy.jpg', confidence = 0.9)
+            
+            try:
+                pt.moveTo(copy[0:2], duration = 0.1)
+                pt.click()
 
-        message = pc.paste()
-        full_message = user+' : '+message+'\n'
+            except:
+                print("Not a text message!")
+                driver.get('https://www.instagram.com/')
+                continue
 
-        with open('Retrieved_messages.txt', 'a') as f:
-            f.write(full_message)
 
-        driver.get('https://www.instagram.com/')
+            message = pc.paste()
+            full_message = user+' : '+message+'\n'
+
+            with open('Retrieved_messages.txt', 'a') as f:
+                f.write(full_message)
+
+            driver.get('https://www.instagram.com/')
