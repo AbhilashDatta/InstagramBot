@@ -19,7 +19,7 @@ def Retrieve_messages_from_inbox(driver, tolerance = 0):
     client = pymongo.MongoClient(url)
     db = client['Retrieved_Messages']
     collection = db['Messages']
-    collection.delete_many({})
+    # collection.delete_many({})
     i = 1
     tol = 0
 
