@@ -20,6 +20,7 @@ from __retrieve_messages_from_csv__ import Retrieve_messages_from_csv
 from __multiple_dm_from_db__ import Multiple_dm_from_db
 from __retrieve_messages_from_inbox__ import Retrieve_messages_from_inbox
 from __multiple_dm_followers__ import Multiple_dm_followers
+from __share_latest_post__ import Share_latest_post
 
 class Bot():
     
@@ -129,6 +130,14 @@ class Bot():
     def multiple_dm_followers(self, message):
         try:
             Multiple_dm_followers(self.driver, message)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to send message!")
+            self.driver.get('https://www.instagram.com/')
+
+    def share_latest_post(self):
+        try:
+            Share_latest_post(self.driver)
             self.driver.get('https://www.instagram.com/')
         except:
             print("Unable to send message!")
