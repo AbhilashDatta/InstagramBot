@@ -17,7 +17,9 @@ from __download_pics__ import Download_pics
 from __like_by_keyword__ import Like_by_keyword
 from __multiple_dm_from_csv__ import Multiple_dm_from_csv
 from __retrieve_messages_from_csv__ import Retrieve_messages_from_csv
-
+from __multiple_dm_from_db__ import Multiple_dm_from_db
+from __retrieve_messages_from_inbox__ import Retrieve_messages_from_inbox
+from __multiple_dm_followers__ import Multiple_dm_followers
 
 class Bot():
     
@@ -106,4 +108,28 @@ class Bot():
             self.driver.get('https://www.instagram.com/')
         except:
             print("Unable to Retrieve message!")
+            self.driver.get('https://www.instagram.com/')
+
+    def multiple_dm_from_db(self, general_message = ''):
+        try:
+            Multiple_dm_from_db(self.driver, general_message)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to send message!")
+            self.driver.get('https://www.instagram.com/')
+
+    def retrieve_messages_from_inbox(self, tolerance = 0):
+        try:
+            Retrieve_messages_from_inbox(self.driver, tolerance)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to Retrieve message!")
+            self.driver.get('https://www.instagram.com/')
+
+    def multiple_dm_followers(self, message):
+        try:
+            Multiple_dm_followers(self.driver, message)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to send message!")
             self.driver.get('https://www.instagram.com/')

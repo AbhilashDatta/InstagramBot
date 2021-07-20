@@ -12,28 +12,34 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 
 
-def Retrieve_messages(driver, users):
-    ''' Function to retrieve the latest message of certain users '''
+def Retrieve_messages_from_inbox(driver, tolerance = 0):
+    ''' Function to retrieve the latest messages from inbox '''
 
     url = "mongodb+srv://"+username+":"+password+"@cluster0.rboro.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
     client = pymongo.MongoClient(url)
     db = client['Retrieved_Messages']
     collection = db['Messages']
     collection.delete_many({})
+    i = 1
+    tol = 0
 
-    if isinstance(users,str):
-        users = [users]
+    while True:
+        driver.get('https://www.instagram.com/direct/inbox/')
 
-    for user in users:
-        search_user = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input')))
-        search_user.send_keys(user)
+        xpath = '//*[@id="react-root"]/section/div/div[2]/div/div/div[1]/div[2]/div/div/div/div/div['+str(i)+']/a/div/div[3]/div'
+        i += 1 
 
-        userclick = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/div[3]/div/div[2]/div/div/a/div'))).click()
-        
         try:
-            m_button = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="react-root"]/section/main/div/header/section/div[1]/div[1]/div/div[1]/button'))).click()
+            userclick = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, xpath))).click()
+            
         except:
-            m_button = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="react-root"]/section/main/div/header/section/div[1]/div[2]/div/div[1]/button'))).click()
+            if tol<tolerance:
+                tol += 1
+                continue
+            
+            else:
+                break
+
         
         wait = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea')))
         
@@ -77,9 +83,11 @@ def Retrieve_messages(driver, users):
 
             message = pc.paste()
 
-            post = { 'username':user,'message':message}
+            user = driver.find_element_by_xpath('//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div[1]/div/div/div[2]/div/div[2]/button/div/div[1]/div').text 
+
+            post = {'username':user,'message':message}
             collection.insert_one(post)
-    
+        
 
             ''' uncomment the below code to save the messages in a text file '''
             # full_message = user+' : '+message+'\n'
@@ -87,9 +95,8 @@ def Retrieve_messages(driver, users):
             # with open('Retrieved_messages.txt', 'a') as f:
             #     f.write(full_message)
 
-            driver.get('https://www.instagram.com/')
+    
+    driver.get('https://www.instagram.com/')
 
-    results = collection.find({})
     print(collection.count_documents({}), " messages retrieved")
-    for r in results:
-        print(r)
+    
