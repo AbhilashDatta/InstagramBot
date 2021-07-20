@@ -116,6 +116,7 @@ bot.logout()
 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
 <p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
+
 ```
 from BOT import Bot
 bot = Bot()
@@ -183,6 +184,7 @@ Follow_users(driver, ['user1','user2'])
   </li>
   <li> Retrieving messages from single/multiple user(s): (Achieved) 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
+<p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
     
 ```
 from __retrieve_messages__ import Retrieve_messages
@@ -192,6 +194,7 @@ Retrieve_messages(driver, [users])
   </li>
   <li> Retrieving messages from single/multiple user(s) with names in a csv file: (Achieved) 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
+<p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
     
 ```
 from __retrieve_messages_from_csv__ import Retrieve_messages_from_csv
