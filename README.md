@@ -260,7 +260,7 @@ Retrieve_messages_from_csv(driver, 'path to csv file')
 ```
 from __retrieve_messages_from_inbox__ import Retrieve_messages_from_inbox
 
-Retrieve_messages_from_csv(tolerance = 1)
+Retrieve_messages_from_inbox(tolerance = 1)
 ```  
 <br>
   </li>
