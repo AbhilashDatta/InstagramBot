@@ -112,6 +112,28 @@ bot.logout()
 
 <br>
 
+* Direct Message multiple users from a db
+```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
+bot.multiple_dm_from_db(general_message)
+bot.logout()
+```
+
+<br>
+
+* Direct Message to all Followers
+```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
+bot.multiple_dm_followers(general_message)
+bot.logout()
+```
+
+<br>
+
 * Retrieve the latest message from multiple user
 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
@@ -142,12 +164,38 @@ bot.logout()
 
 <br>
 
+* Retrieve the latest message from users from our inbox
+
+<p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
+<p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
+    
+```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
+bot.retrieve_messages_from_inbox(tolerance = 2)
+bot.logout()
+```
+
+<br>
+
 * Download posts by a keyword
 ```
 from BOT import Bot
 bot = Bot()
 bot.login(username, password)
 bot.download_pics(keyword)
+bot.logout()
+```
+
+<br>
+
+* Share latest post according to preferred category (as in replied message):
+```
+from BOT import Bot
+bot = Bot()
+bot.login(username, password)
+bot.share_latest_post()
 bot.logout()
 ```
 
@@ -205,6 +253,16 @@ from __retrieve_messages_from_csv__ import Retrieve_messages_from_csv
 Retrieve_messages_from_csv(driver, 'path to csv file')
 ```  
 <br>
+  <li> Retrieving messages from single/multiple user(s) from inbox: (Achieved) 
+<p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
+<p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
+    
+```
+from __retrieve_messages_from_inbox__ import Retrieve_messages_from_inbox
+
+Retrieve_messages_from_csv(tolerance = 1)
+```  
+<br>
   </li>
   <li> Texting to Multiple Users: (Achieved)
 
@@ -221,6 +279,24 @@ Multiple_dm(driver, [users], <message>)
 from __multiple_dm_from_csv__ import Multiple_dm_from_csv
 
 Multiple_dm_from_csv(driver, 'path to csv file', <general message (optional)>)
+```  
+<br>
+</li>
+  <li> Texting to Multiple Users from a Database: (Achieved)
+
+```
+from __multiple_dm_from_db__ import Multiple_dm_from_db
+
+Multiple_dm_from_db(driver, <general message (optional)>)
+```  
+<br>
+  </li>
+  <li> Texting to all Followers: (Achieved)
+
+```
+from __multiple_dm_followers__ import Multiple_dm_followers
+
+Multiple_dm_followers(driver, <general message (optional)>)
 ```  
 <br>
   </li>
