@@ -182,7 +182,7 @@ from __follow_users__ import Follow_users
 
 Follow_users(driver, ['user1','user2'])
 ```  
-    <br>
+<br>
   </li>
   <li> Retrieving messages from single/multiple user(s): (Achieved) 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
@@ -193,7 +193,7 @@ from __retrieve_messages__ import Retrieve_messages
 
 Retrieve_messages(driver, [users])
 ```  
-    <br>
+<br>
   </li>
   <li> Retrieving messages from single/multiple user(s) with names in a csv file: (Achieved) 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
@@ -204,7 +204,7 @@ from __retrieve_messages_from_csv__ import Retrieve_messages_from_csv
 
 Retrieve_messages_from_csv(driver, 'path to csv file')
 ```  
-    <br>
+<br>
   </li>
   <li> Texting to Multiple Users: (Achieved)
 
@@ -213,7 +213,7 @@ from __multiple_dm__ import Multiple_dm
 
 Multiple_dm(driver, [users], <message>)
 ```  
-    <br>
+<br>
   </li>
   <li> Texting to Multiple Users from a csv file: (Achieved)
 
@@ -222,7 +222,7 @@ from __multiple_dm_from_csv__ import Multiple_dm_from_csv
 
 Multiple_dm_from_csv(driver, 'path to csv file', <general message (optional)>)
 ```  
-    <br>
+<br>
   </li>
   <li> Creating Group and texting in it: (Achieved)
 
@@ -231,7 +231,7 @@ from __group_dm__ import Group_dm
 
 Group_dm(driver, [users], <message>)
 ```  
-    <br>
+<br>
   </li>
   <li> Downloading a number of posts with a keyword: (Achieved)
 
@@ -240,7 +240,7 @@ from __download_pics__ import Download_pics
 
 Download_pics(driver, <keyword>)
 ```
-    <br>
+<br>
   </li>
   <li> Liking a number of posts of a user/hashtag: (Achieved)
 
@@ -249,7 +249,7 @@ from __like_by_keyword__ import Like_by_keyword
 
 Like_by_keyword(driver, <keyword>)
 ```
-    <br>
+<br>
   </li>
   <li> Logging Out: (Achieved) 
 
@@ -258,7 +258,7 @@ from __logout__ import Logout
 
 Logout(driver)
 ```
-    <br>
+<br>
   </li>
   <li> GUI app: (On the way)</li>
 </ul>
