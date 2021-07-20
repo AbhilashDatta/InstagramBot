@@ -2,7 +2,9 @@ from selenium import webdriver
 from time import sleep
 import pyperclip as pc
 import pyautogui as pt
-
+import pymongo
+from pymongo import MongoClient
+from db_credentials import username, password
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -12,6 +14,14 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 def Retrieve_messages(driver, users):
     ''' Function to retrieve the latest message of certain users '''
+
+    url = "mongodb+srv://"+username+":"+password+"@cluster0.rboro.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    client = pymongo.MongoClient(url)
+    db = client['Retrieved_Messages']
+    collection = db['Messages']
+    collection.delete_many({})
+
+    id = 1
 
     if isinstance(users,str):
         users = [users]
@@ -33,7 +43,7 @@ def Retrieve_messages(driver, users):
 
         smily = pt.locateOnScreen('images/insta_smily.jpg', confidence = 0.9)
         pt.moveTo(smily[0:2], duration = 0.1)
-        pt.moveRel(70, -70, duration = 0.2)
+        pt.moveRel(70, -70, duration = 0.3)
         
         dots = pt.locateOnScreen('images/insta_dots.png', confidence = 0.9)
 
@@ -62,15 +72,26 @@ def Retrieve_messages(driver, users):
                 pt.click()
 
             except:
-                print("Not a text message!")
+                print("Not a text message from "+user)
                 driver.get('https://www.instagram.com/')
                 continue
 
 
             message = pc.paste()
-            full_message = user+' : '+message+'\n'
 
-            with open('Retrieved_messages.txt', 'a') as f:
-                f.write(full_message)
+            post = {'_id':id, 'username':user,'message':message}
+            collection.insert_one(post)
+            id += 1
+
+            ''' uncomment the below code to save the messages in a text file '''
+            # full_message = user+' : '+message+'\n'
+
+            # with open('Retrieved_messages.txt', 'a') as f:
+            #     f.write(full_message)
 
             driver.get('https://www.instagram.com/')
+
+    results = collection.find({})
+    print(collection.count_documents({}), " messages retrieved")
+    for r in results:
+        print(r)
