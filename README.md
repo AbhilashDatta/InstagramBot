@@ -115,7 +115,7 @@ bot.logout()
 * Retrieve the latest message from multiple user
 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
-    
+<p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
 ```
 from BOT import Bot
 bot = Bot()
@@ -129,6 +129,7 @@ bot.logout()
 * Retrieve the latest message from multiple user in a csv file
 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
+<p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
     
 ```
 from BOT import Bot
