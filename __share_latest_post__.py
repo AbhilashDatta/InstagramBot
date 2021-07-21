@@ -62,7 +62,7 @@ def Share_latest_post(driver):
         print('History post')
 
 
-    user_list = []
+    user_list = set()
 
     url = "mongodb+srv://"+db_username+":"+db_password+"@cluster0.rboro.mongodb.net/Retrieved_Messages?retryWrites=true&w=majority"
     client = MongoClient(url)
@@ -71,19 +71,20 @@ def Share_latest_post(driver):
     results = collection.find({})
    
     for result in results:
+        
         result['message']= result['message'].lower()
 
         if result['message'].find('political')!=-1 and 'political' in category:
-            user_list.append(result['username'])
+            user_list.add(result['username'])
 
         elif result['message'].find('social')!=-1 and 'social' in category:
-            user_list.append(result['username'])
+            user_list.add(result['username'])
 
         elif result['message'].find('activism')!=-1 and 'activism' in category:
-            user_list.append(result['username'])
+            user_list.add(result['username'])
 
         elif result['message'].find('history')!=-1 and 'history' in category:
-            user_list.append(result['username'])
+            user_list.add(result['username'])
 
 
     
