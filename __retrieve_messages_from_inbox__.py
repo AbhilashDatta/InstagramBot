@@ -98,5 +98,5 @@ def Retrieve_messages_from_inbox(driver, tolerance = 0):
     
     driver.get('https://www.instagram.com/')
 
-    print(collection.count_documents({}), " messages retrieved")
+    # print(collection.count_documents({}), " messages retrieved")
     
