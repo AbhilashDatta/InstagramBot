@@ -85,7 +85,13 @@ def Retrieve_messages_from_inbox(driver, tolerance = 0):
 
             user = driver.find_element_by_xpath('//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div[1]/div/div/div[2]/div/div[2]/button/div/div[1]/div').text 
 
-            post = {'username':user,'message':message}
+            if collection.find_one({'username':user})!=None:
+                res = collection.find_one({'username':user})
+                new_message = message+" "+res['message']
+                collection.update_one({'username':user}, {"$set":{'message':new_message}})
+                continue
+
+            post = {'username':user,'message':message,'last_post_link':'none'}
             collection.insert_one(post)
         
 

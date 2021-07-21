@@ -90,11 +90,21 @@ def Share_latest_post(driver):
     
     share = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="react-root"]/section/main/div/div/article/div[3]/section[1]/span[3]/button'))).click()
     
+    count = 0
+
     for user in user_list:
+        res = collection.find_one({'username':user})
+        # print(res)
+        if res['last_post_link']==latest_post_link:
+            continue
+        
+        else:
+            collection.update_one({'username':user}, {"$set":{'last_post_link':latest_post_link}})
+
         search_user = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/input')))
         search_user.send_keys(user)
         selector = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[5]/div/div/div[2]/div[2]/div[1]/div/div[3]/button'))).click()
-    
+        count += 1
         
-    send = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[5]/div/div/div[2]/div[4]/button/div'))).click()
+    if count>0: send = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[5]/div/div/div[2]/div[4]/button/div'))).click()
     
