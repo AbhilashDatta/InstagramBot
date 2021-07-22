@@ -21,6 +21,9 @@ from __multiple_dm_from_db__ import Multiple_dm_from_db
 from __retrieve_messages_from_inbox__ import Retrieve_messages_from_inbox
 from __multiple_dm_followers__ import Multiple_dm_followers
 from __share_latest_post__ import Share_latest_post
+from __share_latest_post_of_epicenter__ import Share_latest_post_of_epicenter
+from __multiple_dm_followers_of_epicenter__ import Multiple_dm_followers_of_epicenter
+
 
 class Bot():
     
@@ -138,6 +141,22 @@ class Bot():
     def share_latest_post(self):
         try:
             Share_latest_post(self.driver)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to share post!")
+            self.driver.get('https://www.instagram.com/')
+
+    def share_latest_post_of_epicenter(self):
+        try:
+            Share_latest_post_of_epicenter(self.driver)
+            self.driver.get('https://www.instagram.com/')
+        except:
+            print("Unable to share post!")
+            self.driver.get('https://www.instagram.com/')
+
+    def multiple_dm_followers_of_epicenter(self, message):
+        try:
+            Multiple_dm_followers_of_epicenter(self.driver, message)
             self.driver.get('https://www.instagram.com/')
         except:
             print("Unable to send message!")

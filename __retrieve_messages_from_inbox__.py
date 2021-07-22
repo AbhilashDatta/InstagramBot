@@ -60,7 +60,7 @@ def Retrieve_messages_from_inbox(driver, tolerance = 0):
             driver.get('https://www.instagram.com/')
             continue
 
-        sleep(1)
+        sleep(0.5)
 
         try:
             unsend = pt.locateOnScreen('images/insta_unsend.png', confidence = 0.9)
