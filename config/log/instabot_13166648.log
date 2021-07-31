@@ -1,0 +1,7 @@
+2021-07-28 12:59:30,330 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2021-07-28 12:59:30,331 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\ABHILASH\.virtualenvs\InstaBot-Sux8_mwP\lib\site-packages\instabot\bot\bot.py
+2021-07-28 12:59:45,340 - instabot version: 0.117.0 (bot) - INFO - Bot stopped. Worked: 0:00:15.011035
+2021-07-28 13:00:40,175 - instabot version: 0.117.0 (api_login) - DEBUG - Loading cookies
+2021-07-28 13:01:14,851 - instabot version: 0.117.0 (bot) - INFO - Bot stopped. Worked: 0:01:44.521927
+2021-07-28 13:01:14,853 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Saving Checkpoint file to: C:\Users\ABHILASH\Desktop\InstaBot/config/instabot3228.checkpoint
+2021-07-28 13:01:14,863 - instabot version: 0.117.0 (bot) - INFO - Total requests: 0

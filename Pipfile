@@ -14,6 +14,13 @@ pillow = "*"
 wget = "*"
 pandas = "*"
 pymongo = {extras = ["srv"], version = "*"}
+httplib2 = "*"
+apiclient = "*"
+instabot = "*"
+google-api-python-client = "*"
+google-auth-httplib2 = "*"
+google-auth-oauthlib = "*"
+oauth2client = "*"
 
 [requires]
 python_version = "3.8"

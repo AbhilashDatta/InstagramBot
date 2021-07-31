@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+body{
+  margin: 0%;
+  overflow-x: hidden;
+}
+
+.logg {
+  margin-top: 35px;
+}
+
+.selll {
+  margin-top: 35px;
+  font-family: "Roboto", sans-serif;
+}
+
+.inn {
+  font-size: 60px;
+  margin-top: 0px;
+  font-weight: bold;
+}
+
+.conn {
+  font-size: 30px;
+  margin-top: 15px;
+  font-family: "Roboto", sans-serif;
+  /* font-weight: 100; */
+}
+
+.chhhh {
+  margin: auto;
+  width: 50%;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.fojo {
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+}
+
+.aa {
+  color: white;
+  text-decoration: none;
+}
+.aa:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.blehh {
+  width: 18rem;
+  box-shadow: 5px 10px 18px #888888;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.bl2 {
+  margin-top: 200px;
+}
+
+@media only screen and (max-width: 994px) {
+  .blehh {
+    width: 90%;
+    box-shadow: 5px 10px #888888;
+    margin-bottom: 70px;
+  }
+
+  .bl2 {
+    margin-top: 150px;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .chhhh {
+    margin: auto;
+    width: 90%;
+  }
+
+  .fojo {
+    margin: auto;
+    width: 90%;
+  }
+}

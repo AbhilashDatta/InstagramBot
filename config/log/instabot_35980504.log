@@ -1,0 +1,4 @@
+2021-07-28 12:12:10,783 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2021-07-28 12:12:10,783 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\ABHILASH\.virtualenvs\InstaBot-Sux8_mwP\lib\site-packages\instabot\bot\bot.py
+2021-07-28 12:12:13,356 - instabot version: 0.117.0 (api_photo) - ERROR - Photo does not have a compatible photo aspect ratio.
+2021-07-28 12:12:13,358 - instabot version: 0.117.0 (bot_photo) - INFO - Photo 'Drive_downloads/Logo.jpg' is not uploaded.
