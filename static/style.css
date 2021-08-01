@@ -1,11 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-body{
+body {
   margin: 0%;
   overflow-x: hidden;
+  background-color: black;
+  color: white;
 }
 
+a {
+  color: red;
+}
+
+a:hover {
+  color: red;
+}
+
+/*Nav bar*/
+.navvv {
+  background-color: black;
+  height: 90px;
+  font-size: 18px;
+}
+
+.navb {
+  margin-top: 20px;
+}
+
+.ep {
+  float: right;
+}
+
+.livee {
+  position: absolute;
+  top: 40px;
+  left: 83px;
+}
+
+/* Live animation*/
+@keyframes up-right {
+  0% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale (1, 5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+}
+.circle {
+  position: absolute;
+  top: 50px;
+  left: 130px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  opacity: 0.25;
+}
+.red {
+  background-color: red;
+  -webkit-animation: up-right 1s infinite;
+  -moz-animation: up-right 1s infinite;
+  -o-animation: up-right 1s infinite;
+  animation: up-right 1s infinite;
+}
+
+/* Nav bar end */
 .logg {
   margin-top: 35px;
 }
@@ -52,18 +116,21 @@ body{
 
 .blehh {
   width: 18rem;
-  box-shadow: 5px 10px 18px #888888;
+
+  /* box-shadow: 5px 10px 18px #888888; */
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .bl2 {
   margin-top: 200px;
 }
 
+/* Media Queries */
 @media only screen and (max-width: 994px) {
   .blehh {
     width: 90%;
-    box-shadow: 5px 10px #888888;
+    /*box-shadow: 5px 10px #888888;*/
     margin-bottom: 70px;
+    background-color: black;
   }
 
   .bl2 {
@@ -80,5 +147,35 @@ body{
   .fojo {
     margin: auto;
     width: 90%;
+  }
+
+  .nd {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 788px) {
+  .selll {
+    margin-top: 180px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .circle {
+    top: 70px;
+  }
+  .livee {
+    top: 60px;
+  }
+  .navvv {
+    height: 110px;
+  }
+
+  .selll {
+    margin-top: 150px;
+  }
+
+  .nach {
+    margin-top: -50px;
   }
 }

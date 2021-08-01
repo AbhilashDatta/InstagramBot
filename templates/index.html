@@ -11,7 +11,7 @@
         <title>Instagram Bot</title>
 
         <!--Favicon-->
-        <link href="../static/logo.jpg" rel="icon">
+        <link href="../static/epic.png" rel="icon">
 
         <!--Bootstrap Css-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -25,37 +25,32 @@
     </head>
     
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color:black;box-shadow: 5px 10px 18px #888888">
+          <nav class="navbar navbar-expand-md fixed-top navbar-dark navvv" >
             <div class="container-fluid">
-                &nbsp; &nbsp;
-              <a class="navbar-brand" href="#">Instagram Bot</a>
+              <a class="navbar-brand navb" href="#"><img src="../static/epic.png" width="70px" height="70px"/> <p class="ep">Instagram Bot</p><p class="livee">Live<div class="circle red"></div></p></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class='bx bxs-navigation' style="font-size:30px"></i>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="collapse navbar-collapse navHeaderCollapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   &nbsp; &nbsp;
-                    <li class="nav-item">
-                    <a class="nav-link" href="#DM">DM</a>
-                  </li>
-                  &nbsp; &nbsp;
-                  <li class="nav-item">
-                    <a class="nav-link" href="#Retrieve">Retrieve</a>
-                  </li>
-                  &nbsp; &nbsp;
-                  <li class="nav-item">
-                    <a class="nav-link" href="#Share">Share</a>
-                  </li>
+                    
                 </ul>
-                <!-- <div class="d-flex">
+                 <div class="d-flex nach" style="background-color: black;">
+                   <!--
                     <a class="nav-link" href="#Login">Login</a>
-                  </div> -->
+                   -->
+                    <a class="nav-link" style="color:white" href="#DM">DM Followers</a>
+                    <a class="nav-link" style="color:white" href="#Retrieve">Retrieve Message</a>
+                    <a class="nav-link" style="color:white" href="#Share">Share Post</a>
+                  </div> 
               </div>
             </div>
           </nav>
+
           <br><br>
         <div class="container logg">
-              <a class="navbar-brand navb" href="#"><img src="../static/logo.jpg" width="170px" height="170px"/> </a>
+              <a class="navbar-brand navb nd" href="#"><img src="../static/epic.png" width="170px" height="170px"/> </a>
               
           </div>
 
@@ -70,41 +65,42 @@
             </div>
 
             <div class="row conn">
-                <div class="col-12 col-md-7" >A multipurpose automated bot that can mass text users, receive messages, share posts and much more.</div>
+                <div class="col-12 col-md-7" >A multipurpose automated bot that can mass text users, receive messages, share posts and much more</div>
             </div>
           </div>
 
-          <div class="container" style= "margin-top: 100px;">
+          <div class="container" style= "margin-top:100px;">
               <div class="row">
                   <div class="col-12 col-lg-4">
-                    <div class="card blehh">
-                        <div class="card-body">
+                    <div class="card blehh" style="border:none;">
+                        <div class="card-body" style="background-color: black; ">
                           <h5 class="card-title">Multi-DM Followers</h5>
                           
                           <p class="card-text">This will DM all followers of our account.</p>
-                          <a href="https://github.com/AbhilashDatta/InstagramBot/blob/main/__multiple_dm_followers__.py" class="card-link" target="_blank">See code</a>
+                          <a href="#DM" class="card-link">Take me there!</a>
                         </div>
                       </div>
                   </div>
+                  
 
                   <div class="col-12 col-lg-4">
-                    <div class="card blehh" >
-                        <div class="card-body">
+                    <div class="card blehh"  style="border:none;">
+                        <div class="card-body" style="background-color: black;">
                           <h5 class="card-title">Retrieve Messages</h5>
 
                           <p class="card-text">This will retrieve all new message from our inbox.</p>
-                          <a href="https://github.com/AbhilashDatta/InstagramBot/blob/main/__retrieve_messages_from_inbox__.py" class="card-link" target="_blank">See code</a>
+                          <a href="#Retrieve" class="card-link">Take me there!</a>
                         </div>
                       </div>
                   </div>
 
                   <div class="col-12 col-lg-4">
-                    <div class="card  blehh" >
-                        <div class="card-body">
+                    <div class="card  blehh"  style="border:none;" >
+                        <div class="card-body" style="background-color: black; ">
                           <h5 class="card-title">Share Latest Post</h5>
                 
-                          <p class="card-text">This will analyze our latest post and send it to specific users.</p>
-                          <a href="https://github.com/AbhilashDatta/InstagramBot/blob/main/__share_latest_post__.py" class="card-link" target="_blank">See code</a>
+                          <p class="card-text">This will analyze our latest post and send it to specific users</p>
+                          <a href="#Share" class="card-link" >Take me there!</a>
                         </div>
                       </div>
                   </div>
@@ -141,10 +137,10 @@
                 </div>
                 </div>  -->
 
-                <div class="row" id = "DM" style=" background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../static/backcon.jpg);background-size: cover; margin-top: 100px;">
+                <div class="row" id = "DM" style=" background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../static/mes.jpg);background-size: cover; margin-top: 100px;">
                     <div class="col-12 col-lg-6" style="margin-top:100px">
                         <div class="container" style="padding-left: 4em;">
-                        <h6 style="text-align:left; color:white;" class="fw-light"> Instagrambot</h6>
+                        <h6 style="text-align:left; color:white;" class="fw-light"> Instagram Bot</h6>
                         <h4 style="text-align:left; font-size:50px; color:white;margin-top:30px"> DM  All</h4>
                         <h4 style="text-align:left; font-size:50px; color:white;">  Followers</h4><br>
                         <p style="text-align:left; font-size:20px; color:white;">This will DM the general message to all followers of your account</p>
@@ -156,17 +152,17 @@
                             <div style="margin:auto; width:100%; background-color: white; padding: 0px 30px 30px 30px; margin-top:80px">
                           
                                <form >
-                                <label for="username" style="margin-top:40px">Userame</label><br>
+                                <label for="username" style="margin-top:40px; color:black">Userame</label><br>
                                 <input style ="margin:auto; width:100%; height: 50px; padding-left: 1em;" id="username" name="username" placeholder="Enter your username" required="true" type="text" invalid="">
                                 
-                                <label for="password" style="margin-top:40px">Password</label><br>
+                                <label for="password" style="margin-top:40px;color:black">Password</label><br>
                                 <input style ="margin:auto; width:100%; border:1px solid #474545; height: 50px;  padding-left: 1em;" id="username" name="password" placeholder="Enter your password" required="true" type="password" invalid="">
                         
-                                <label for="input-2" style="margin-top:40px">General Message</label><br>
-                                <textarea name="message" style="margin:auto; width:100%; height: 80px;"  required="true" placeholder="Type your message">
+                                <label for="input-2" style="margin-top:40px; color:black">General Message</label><br>
+                                <textarea  placeholder="Type your message" name="message" style="margin:auto; width:100%; height: 80px;"  required="true">
                                 </textarea>
                                 <div class="text-center">
-                                    <input name="dm" value="Send" type="submit" class="btn btn-primary" style="margin-top:30px">
+                                    <input name="dm" value="Send" type="submit" class="btn btn-danger" style="margin-top:30px">
                                 </div>
                                 </form>
                             </div>   
@@ -177,12 +173,12 @@
                 <div class="row" id = "Retrieve" style=" margin-top: 50px;">
                     <div class="col-12 col-lg-6" style="margin-top:90px">
                         <div class="container" style="padding-left: 4em;">
-                        <h6 style="text-align:left; margin-top: 0px;" class="fw-light"> Instagrambot</h6>
+                        <h6 style="text-align:left; margin-top: 0px;" class="fw-light"> Instagram Bot</h6>
                         <h4 style="text-align:left; font-size:50px;;margin-top:30px"> Retrieve Message</h4>
                         <!-- <h4 style="text-align:left; font-size:50px; color:white;">  Followers</h4><br> -->
                         <p style="text-align:left; font-size:20px;margin-top: 40px; ">This function will retrieve all the latest messages from our inbox.</p>
-                        <p><strong>MAKE SURE TO MAXIMIZE THE CHROMEDRIVER WINDOW.</strong></p>
-                        <p><strong>AFTER THAT, DONT MOVE THE MOUSE UNTIL IT LOGS OUT.</strong></p>
+                        <p style="color:white"><strong>MAKE SURE TO MAXIMIZE THE CHROMEDRIVER WINDOW</strong></p>
+                        <p><strong>AFTER THAT, DON'T MOVE THE MOUSE UNTIL IT LOGS OUT</strong></p>
                         </div>
                     </div>
                     <div class="col-12 col-lg-5" style="margin-bottom:80px;">
@@ -191,10 +187,10 @@
                             <div style="margin:auto; width:100%; background-color: white; padding: 0px 30px 30px 30px; margin-top:40px">
                           
                                <form >
-                                <label for="username" style="margin-top:80px">Userame</label><br>
+                                <label for="username" style="margin-top:40px;color:black">Userame</label><br>
                                 <input style ="margin:auto; width:100%; height: 50px; padding-left: 1em;" id="username" name="username" placeholder="Enter your username" required="true" type="text" invalid="">
                                 
-                                <label for="password" style="margin-top:40px">Password</label><br>
+                                <label for="password" style="margin-top:40px; color:black">Password</label><br>
                                 <input style ="margin:auto; width:100%; border:1px solid #474545; height: 50px;  padding-left: 1em;" id="username" name="password" placeholder="Enter your password" required="true" type="password" invalid="">
                         
                                 <!-- <label for="input-2" style="margin-top:40px">General Message</label><br>
@@ -202,7 +198,7 @@
                                 </textarea> -->
                                 
                                 <div class="text-center">
-                                    <input name="retrieve" type="submit" style="margin-top:40px" id = "retrieve" value="Retrieve" class="btn btn-primary">
+                                    <input name="retrieve" type="submit" style="margin-top:40px" id = "retrieve" value="Retrieve" class="btn btn-danger">
                                 </div>
                                 </form>
                             </div>           
@@ -233,7 +229,7 @@
             <div class="row" id = "Share" style=" background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../static/backcon.jpg);background-size: cover; margin-top: 100px; margin-bottom: 50px;">
                 <div class="col-12 col-lg-6" style="margin-top:120px">
                     <div class="container" style="padding-left: 4em;">
-                    <h6 style="text-align:left; color:white;" class="fw-light"> Instagrambot</h6>
+                    <h6 style="text-align:left; color:white;" class="fw-light"> Instagram Bot</h6>
                     <h4 style="text-align:left; font-size:50px; color:white;margin-top:30px"> Share Latest Post</h4>
                     <p style="text-align:left; font-size:20px; color:white;margin-top: 40px;">This function will do a Caption analysis of our latest post and then send it to selected people.</p>
                     </div>
@@ -244,17 +240,17 @@
                         <div style="margin:auto; width:100%; background-color: white; padding: 0px 30px 30px 30px; margin-top:80px">
                       
                            <form >
-                            <label for="username" style="margin-top:40px">Userame</label><br>
+                            <label for="username" style="margin-top:40px; color:black">Userame</label><br>
                             <input style ="margin:auto; width:100%; height: 50px; padding-left: 1em;" id="username" name="username" placeholder="Enter your username" required="true" type="text" invalid="">
                             
-                            <label for="password" style="margin-top:40px">Password</label><br>
+                            <label for="password" style="margin-top:40px; color:black">Password</label><br>
                             <input style ="margin:auto; width:100%; border:1px solid #474545; height: 50px;  padding-left: 1em;" id="username" name="password" placeholder="Enter your password" required="true" type="password" invalid="">
                     
                             <!-- <label for="input-2" style="margin-top:40px">General Message</label><br>
                             <textarea name="message" style="margin:auto; width:100%; height: 80px;"  required="true" >
                             </textarea> -->
                             <div class="text-center">
-                                <input name="share" value="Share" type="submit" id="share" class="btn btn-primary" style="margin-top:30px">
+                                <input name="share" value="Share" type="submit" id="share" class="btn btn-danger" style="margin-top:30px">
                             </div>
                             </form>
                         </div>   
@@ -268,7 +264,7 @@
                     <div class="row">
                         <div class="col-12 col-md-3" style="margin-top: 80px;"></div>
                         <div class="col-12 col-md-6" style="text-align:center ;">
-                            <img src="../static/logo.jpg" width="200px" height="200px">
+                            <img src="../static/epic.png" width="200px" height="200px">
                             <p style="margin-top:20px">© 2021 InstagramBot by Abhilash Datta</p>
                         </div>
                         <div class="col-12 col-md-3"></div>
@@ -284,6 +280,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-
+        
     </body>
 </html>
