@@ -22,6 +22,7 @@ google-auth-httplib2 = "*"
 google-auth-oauthlib = "*"
 oauth2client = "*"
 gunicorn = "*"
+flask = "*"
 
 [requires]
 python_version = "3.8"
