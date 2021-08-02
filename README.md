@@ -9,7 +9,7 @@ July 14, 2021
 A multifunctionality automated instagram bot that can mass text users, receive and read a message and store it somewhere with user details and much more. Powered by Selenium.
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
-
+<img src="license-mit.svg" />
 <br>
 
 ## Get Started 🤞
