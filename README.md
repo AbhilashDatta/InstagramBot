@@ -152,6 +152,7 @@ bot.logout()
 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
 <p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
+<p> For further reference watch this video: https://www.youtube.com/watch?v=XI_GyOnw3M0 </p>
 
 ```
 from BOT import Bot
@@ -167,6 +168,7 @@ bot.logout()
 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
 <p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
+<p> For further reference watch this video: https://www.youtube.com/watch?v=XI_GyOnw3M0 </p>
     
 ```
 from BOT import Bot
@@ -182,6 +184,7 @@ bot.logout()
 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
 <p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
+<p> For further reference watch this video: https://www.youtube.com/watch?v=XI_GyOnw3M0 </p>
     
 ```
 from BOT import Bot
@@ -248,6 +251,7 @@ Follow_users(driver, ['user1','user2'])
   </li>
   <li> Retrieving messages from single/multiple user(s): (Achieved) 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
+<p> For further reference watch this video: https://www.youtube.com/watch?v=XI_GyOnw3M0 </p>
 <p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
     
 ```
@@ -259,6 +263,7 @@ Retrieve_messages(driver, [users])
   </li>
   <li> Retrieving messages from single/multiple user(s) with names in a csv file: (Achieved) 
 <p><b> &nbsp &nbsp UPDATE THE IMAGES DIRECTORY WITH SCREENSHOTS TAKEN FROM YOUR COMPUTER</b></p>
+<p> For further reference watch this video: https://www.youtube.com/watch?v=XI_GyOnw3M0 </p>
 <p><b> &nbsp &nbsp UPDATE THE DATABASE CREDENTIALS IN db_credentials.py FILE</b></p>
     
 ```
