@@ -28,7 +28,12 @@ from __multiple_dm_followers_of_epicenter__ import Multiple_dm_followers_of_epic
 class Bot():
     
     def __init__(self):
-        self.driver = webdriver.Chrome()
+        chrome_opt = webdriver.ChromeOptions()
+        prefs = {"credentials_enable_service", False}
+        prefs = {"profile.password_manager_enabled" : False}
+        chrome_opt.add_experimental_option("prefs", prefs)
+
+        self.driver = webdriver.Chrome(chrome_options=chrome_opt)
         self.driver.maximize_window()
         
     def login(self, usrname, passkey):
